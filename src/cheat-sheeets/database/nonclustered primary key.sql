@@ -1,0 +1,10 @@
+CREATE TABLE dbo.MyTable
+(
+    A INT NOT NULL,
+    B INT NOT NULL,
+    C NVARCHAR(100),
+
+    CONSTRAINT PK_MyTable_A PRIMARY KEY  NONCLUSTERED (A)
+);
+
+CREATE unique CLUSTERED INDEX IX_MyTable_B ON dbo.MyTable (B);

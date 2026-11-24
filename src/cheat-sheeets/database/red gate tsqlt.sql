@@ -1,0 +1,7 @@
+throw
+PRINT N'Altering CLR assemblies'
+GO
+throw
+ALTER ASSEMBLY [tSQLtCLR]
+WITH PERMISSION_SET = EXTERNAL_ACCESS
+GO

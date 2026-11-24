@@ -1,0 +1,29 @@
+SELECT DISTINCT  TABLE_SCHEMA +'.'+ TABLE_NAME, DATA_TYPE, DATETIME_PRECISION, COLUMN_DEFAULT
+      FROM AssetManagementSolution.INFORMATION_SCHEMA.COLUMNS
+      WHERE COLUMN_NAME LIKE '%Entry%';
+
+	  SELECT DISTINCT  TABLE_SCHEMA +'.'+ TABLE_NAME, DATA_TYPE, DATETIME_PRECISION, COLUMN_DEFAULT
+      FROM AssetManagementSolution.INFORMATION_SCHEMA.COLUMNS
+      WHERE COLUMN_NAME LIKE '%EventDate%';
+
+
+	  SELECT DISTINCT  TABLE_SCHEMA +'.'+ TABLE_NAME, COLUMN_NAME, DATA_TYPE, NUMERIC_PRECISION, NUMERIC_SCALE, COLUMN_DEFAULT
+      FROM AssetManagementSolution.INFORMATION_SCHEMA.COLUMNS
+      WHERE DATA_TYPE = 'decimal';
+
+
+
+
+  DBCC CHECKIDENT ('AssetManagementSolution.core.ContributionInKind', RESEED, 0)
+
+
+-- seed 0
+  DBCC CHECKIDENT ('[Sponsor]', RESEED, 0);
+
+
+--get columns from sp
+EXEC sys.sp_describe_first_result_set 
+        @tsql = N'EXEC YourStoredProcedure';
+
+
+  SET IDENTITY_INSERT base.shareholders  ON 

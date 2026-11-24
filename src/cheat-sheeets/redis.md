@@ -1,0 +1,4 @@
+flushall
+
+
+keys *

@@ -1,0 +1,3 @@
+// get result set structure to create a temp table or ...
+exec sys.sp_describe_first_result_set @tsql = N'EXEC [dbo].[SpGetCustomersToCrawl]'
+
