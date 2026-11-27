@@ -112,3 +112,4 @@ consistency requirements (consistency levels): Strong Consistency, Causal Consis
 Bijective Function
 Birthday paradox (hash collision)
 Hedged request %TODO%
+clock drift (matters in horizantal scaling)
